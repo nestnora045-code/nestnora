@@ -1,5 +1,4 @@
 import React from 'react';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
 
 // Replace with any preferred images
 import ceo from './images/anora.jpeg';
@@ -13,21 +12,18 @@ const Team: React.FC = () => {
       role: 'CEO & Pinterest Strategist',
       bio: 'Leads our vision and strategy, helping brands thrive on Pinterest and beyond.',
       image: ceo,
-      social: { linkedin: '#', twitter: '#', email: 'anora@nestnora.com' },
     },
     {
       name: 'David Brooks',
       role: 'Lead Designer',
       bio: 'Creates bold, high-converting visuals that capture attention and drive clicks.',
       image: designer,
-      social: { linkedin: '#', twitter: '#', email: 'david@nestnora.com' },
     },
     {
       name: 'Sophia Lee',
       role: 'Creative Director',
       bio: 'Shapes the creative direction, blending art and strategy for maximum impact.',
       image: crdirector,
-      social: { linkedin: '#', twitter: '#', email: 'sophia@nestnora.com' },
     },
   ];
 
@@ -64,28 +60,6 @@ const Team: React.FC = () => {
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 {member.bio}
               </p>
-
-              {/* Social Icons */}
-              <div className="flex justify-center gap-4">
-                <a
-                  href={member.social.linkedin}
-                  className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500/20 transition"
-                >
-                  <Linkedin className="h-5 w-5 text-gray-400 hover:text-yellow-500" />
-                </a>
-                <a
-                  href={member.social.twitter}
-                  className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500/20 transition"
-                >
-                  <Twitter className="h-5 w-5 text-gray-400 hover:text-yellow-500" />
-                </a>
-                <a
-                  href={`mailto:${member.social.email}`}
-                  className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500/20 transition"
-                >
-                  <Mail className="h-5 w-5 text-gray-400 hover:text-yellow-500" />
-                </a>
-              </div>
             </div>
           ))}
         </div>
